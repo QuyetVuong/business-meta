@@ -91,7 +91,7 @@
         // Lấy dãy số ngẫu nhiên
         const randomNumber = generateRandomNumber();
         // Thêm dãy số vào URL
-        //const newUrl = `${currentUrl}?helpbusiness_id_${randomNumber}`;
+        const newUrl = `${currentUrl}?helpbusiness_id_${randomNumber}`;
         // Cập nhật lại URL của trang
         window.history.replaceState(null, '', newUrl);
     }
