@@ -1,4 +1,72 @@
-    
-    @import url("https://biotr.link/themes/altum/assets/css/bootstrap.min.css?v=4810");
-    @import url("https://biotr.link/themes/altum/assets/css/custom.css?v=4810");
-    @import url("https://biotr.link/themes/altum/assets/css/custom.css?v=4810");
+/* Đảm bảo font chữ thống nhất */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+/* Căn giữa nội dung */
+.link-content {
+    text-align: center;
+}
+
+/* Căn chỉnh ảnh theo chiều ngang và đồng đều kích thước trên máy tính */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Thiết lập hình ảnh */
+.row a img {
+    width: 50vw; /* 50% chiều rộng của màn hình */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 10px;
+}
+
+/* Thiết lập cho nút REQUEST REVIEW */
+#random-link {
+    display: block;
+    width: 50vw; /* 50% chiều rộng của màn hình */
+    height: 50px; /* Độ cao cố định */
+    padding: 12px;
+    margin: 20px auto;
+    text-align: center;
+    background: #4864DD;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 0px #00000010;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row a img {
+        width: 100%; /* Chiều ngang ảnh bằng với chiều rộng điện thoại */
+        height: auto; /* Chiều cao tự động theo tỉ lệ */
+        max-height: 50vh; /* Không quá 50% chiều cao màn hình */
+    }
+
+    #random-link {
+        width: 90%; /* Nút co giãn theo màn hình */
+    }
+}
