@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: center; /* Căn giữa theo chiều ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
-    width: 50vw; /* 50% chiều rộng của màn hình */
+    width: 100%; /* 50% chiều rộng của màn hình */
     height: 50px; /* Độ cao cố định */
     padding: 12px;
     margin: 20px auto;
